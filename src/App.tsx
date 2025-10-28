@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import { authProvider } from "./authProvider";
 import { Hero } from "./pages/loginDeanery/Hero"; 
-import { Registrarse } from "./pages/loginDeanery/registrarse"; 
+import { Registrarse } from "./pages/loginDeanery/Registrarse"; 
 import { Registrado } from "./pages/loginDeanery/Registrado"; 
 import { RecuperarCorreo} from "./pages/forgotPassword/RecuperarCorreo"; 
 import { Confirmacion} from "./pages/forgotPassword/Confirmacion"; 
