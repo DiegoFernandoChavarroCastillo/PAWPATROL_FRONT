@@ -15,9 +15,14 @@ import { Registrado } from "./pages/loginDeanery/Registrado";
 import { RecuperarCorreo} from "./pages/forgotPassword/RecuperarCorreo"; 
 import { Confirmacion} from "./pages/forgotPassword/Confirmacion"; 
 import { Dashboard} from "./pages/Dashboard/Dashboard"; 
+import { Alert } from "./pages/Alert/Alert";
+import { Report} from "./pages/Report/Report";
+import { ReportAsignatura} from "./pages/Report/ReportAsignatura";
 import { RequestStudents} from "./pages/RequestsDeanery/RequestStudents"; 
-
-
+import { ReportDecano} from "./pages/Report/ReportDecano";
+import { ReportGlobal} from "./pages/Report/ReportGlobal";
+import { ReportGrupo} from "./pages/Report/ReportGrupo";
+import SolicitudesPorFacultad from "./pages/statistics/Statiscs";
 function App() {
   return (
     <BrowserRouter>
@@ -42,7 +47,15 @@ function App() {
               <Route path="/recuperar-correo" element={<RecuperarCorreo />} />
               <Route path="/confirmar-correo" element={<Confirmacion />} />
               <Route path="/menu-inicial" element={<Dashboard/>} />
+              <Route path="/Alertas" element={<Alert/>} />
+              <Route path="/Reporte" element={<Report/>} />
+              <Route path="/Reporte-Asignatura" element={<ReportAsignatura/>} />
+              <Route path="/Reporte-Decanatura" element={<ReportDecano/>} />
+              <Route path="/Reporte-Global" element={<ReportGlobal/>} />
+              <Route path="/Reporte-Grupo" element={<ReportGrupo/>} />
               <Route path="/solicitudes-estudiante" element={<RequestStudents/>} />
+              <Route path="/solicitudes-facultad" element={<SolicitudesPorFacultad />} />
+
               
             </Routes>
 

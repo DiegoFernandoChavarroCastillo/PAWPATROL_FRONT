@@ -56,7 +56,7 @@ export const RequestStudents = () => {
           {/* Fila inferior: Volver al inicio izquierda, Icono derecha */}
           <div className="flex justify-between items-center">
             <button
-              onClick={() => navigate("/inicio-sesion")}
+              onClick={() => navigate("/menu-inicial")}
               className="bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg transition w-48 h-12 text-lg"
             >
               Volver al inicio

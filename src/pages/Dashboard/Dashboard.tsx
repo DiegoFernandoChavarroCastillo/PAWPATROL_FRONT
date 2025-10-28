@@ -27,7 +27,7 @@ export const Dashboard = () => {
         <div className="flex flex-col lg:flex-row w-full justify-around gap-10 -translate-y-40">
           <div className="flex flex-col items-center gap-15">
             <button
-              onClick={() => navigate("/reportes")}
+              onClick={() => navigate("/reporte")}
               className="bg-white/90 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg shadow w-80 h-30 text-lg flex items-center justify-center gap-2">
               <img src="/Reportes.svg" alt="Icono" className="w-40 h-40" />
             </button>
@@ -39,7 +39,7 @@ export const Dashboard = () => {
             </button>
 
             <button
-              onClick={() => navigate("/estadisticas-solicitudes")}
+              onClick={() => navigate("/solicitudes-facultad")}
               className="bg-white/90 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg shadow w-80 h-30 text-lg flex items-center justify-center gap-2">
               <img src="/Estadisticas.svg" alt="Icono" className="w-50 h-50" />
             </button>
@@ -48,7 +48,7 @@ export const Dashboard = () => {
       
           <div className="flex flex-col items-center gap-15">
             <button
-              onClick={() => navigate("/gestion-alertas")}
+              onClick={() => navigate("/Alertas")}
               className="bg-white/90 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg shadow w-80 h-30 text-lg flex items-center justify-center gap-2">
               <img src="/alertas.svg" alt="Icono" className="w-50 h-50" />
             </button>
@@ -69,7 +69,7 @@ export const Dashboard = () => {
 
         <button
           onClick={() => navigate("/inicio-sesion")}
-          className="bg-white/90 w-80 h-30 translate-y-20 -translate-x-150">
+          className="bg-white/90 w-40 h-20 translate-y-20 -translate-x-150">
           ↲ Cerrar sesión
         </button>
       </article>
