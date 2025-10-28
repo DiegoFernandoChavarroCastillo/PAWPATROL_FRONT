@@ -23,6 +23,8 @@ import { ReportDecano} from "./pages/Report/ReportDecano";
 import { ReportGlobal} from "./pages/Report/ReportGlobal";
 import { ReportGrupo} from "./pages/Report/ReportGrupo";
 import SolicitudesPorFacultad from "./pages/statistics/Statiscs";
+import Decanatura from "./pages/consult/consulta";
+
 function App() {
   return (
     <BrowserRouter>
@@ -55,7 +57,7 @@ function App() {
               <Route path="/Reporte-Grupo" element={<ReportGrupo/>} />
               <Route path="/solicitudes-estudiante" element={<RequestStudents/>} />
               <Route path="/solicitudes-facultad" element={<SolicitudesPorFacultad />} />
-
+              <Route path="/consultas" element={< Decanatura />} />
               
             </Routes>
 

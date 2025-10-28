@@ -70,7 +70,7 @@ export default function SolicitudesPorFacultad() {
           {/* Sección inferior con botón y logo */}
           <div className="w-full max-w-6xl flex justify-between mt-8 items-center">
             <button
-              onClick={() => navigate("/dashboard")}
+              onClick={() => navigate("/menu-inicial")}
               className="text-gray-800 text-lg hover:underline transition flex items-center gap-2"
             >
               ← Volver al inicio
