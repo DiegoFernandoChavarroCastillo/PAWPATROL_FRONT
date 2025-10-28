@@ -1,6 +1,6 @@
 import { ButtonPrimary } from "../../components/ButtonPrimary";
 import { useNavigate } from "react-router-dom";
-export const Hero = () => {
+export const Registrarse = () => {
   const navigate = useNavigate();
   return (
   <section className="bg-[url('/Fondo.svg')] bg-cover bg-center min-h-screen flex items-center justify-center">
@@ -21,7 +21,7 @@ export const Hero = () => {
           />
         </div>
 
-        <div className="w-full mb-6, -translate-y-5">
+        <div className="w-full mb-6, -translate-y-8">
           <label className="block text-gray-700 text-sm mb-1,">
             CONTRASEÑA:
           </label>
@@ -31,28 +31,20 @@ export const Hero = () => {
             className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
+        <div className="w-full mb-6, -translate-y-6">
+          <label className="block text-gray-700 text-sm mb-1,">
+            CONFIRMAR CONTRASEÑA:
+          </label>
+          <input
+            type="password"
+            placeholder="********"
+            className="w-full p-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+        </div>
 
-       <ButtonPrimary text="INICIAR SESIÓN" onClick={() => navigate("/menu-inicial")}  />
-        <a
-          href="#"
-          className="text-xs text-gray-600 hover:underline"
-          onClick={(e) => {
-            e.preventDefault(); 
-            navigate("/inicio-registro");
-          }}
-        >
-          ¿Registrarse?
-        </a>
-         <a
-          href="#"
-          className="text-xs text-gray-600 hover:underline"
-          onClick={(e) => {
-            e.preventDefault(); 
-            navigate("/recuperar-correo");
-          }}
-        >
-          ¿OLVIDASTE TU CONTRASEÑA?
-        </a>
+       <ButtonPrimary text="INICIAR SESIÓN" onClick={() => navigate("/fin-registro")}  />
+        
+        
       </article>
     </section>
   );

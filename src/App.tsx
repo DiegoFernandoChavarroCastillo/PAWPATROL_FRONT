@@ -10,6 +10,8 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import { authProvider } from "./authProvider";
 import { Hero } from "./pages/loginDeanery/Hero"; 
+import { Registrarse } from "./pages/loginDeanery/registrarse"; 
+import { Registrado } from "./pages/loginDeanery/Registrado"; 
 import { RecuperarCorreo} from "./pages/forgotPassword/RecuperarCorreo"; 
 import { Confirmacion} from "./pages/forgotPassword/Confirmacion"; 
 import { Dashboard} from "./pages/Dashboard/Dashboard"; 
@@ -34,9 +36,12 @@ function App() {
             <Routes>
               <Route index element={<Hero />} />
               <Route path="/inicio-seccion" element={<Hero />} />
+              <Route path="/inicio-registro" element={<Registrarse />} />
+              <Route path="/fin-registro" element={<Registrado/>} />
               <Route path="/recuperar-correo" element={<RecuperarCorreo />} />
               <Route path="/confirmar-correo" element={<Confirmacion />} />
               <Route path="/menu-inicial" element={<Dashboard/>} />
+              
             </Routes>
 
             <RefineKbar />
