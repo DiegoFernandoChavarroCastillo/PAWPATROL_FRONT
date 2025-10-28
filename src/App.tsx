@@ -15,6 +15,7 @@ import { Registrado } from "./pages/loginDeanery/Registrado";
 import { RecuperarCorreo} from "./pages/forgotPassword/RecuperarCorreo"; 
 import { Confirmacion} from "./pages/forgotPassword/Confirmacion"; 
 import { Dashboard} from "./pages/Dashboard/Dashboard"; 
+import { RequestStudents} from "./pages/RequestsDeanery/RequestStudents"; 
 
 
 function App() {
@@ -35,12 +36,13 @@ function App() {
           >
             <Routes>
               <Route index element={<Hero />} />
-              <Route path="/inicio-seccion" element={<Hero />} />
+              <Route path="/inicio-sesion" element={<Hero />} />
               <Route path="/inicio-registro" element={<Registrarse />} />
               <Route path="/fin-registro" element={<Registrado/>} />
               <Route path="/recuperar-correo" element={<RecuperarCorreo />} />
               <Route path="/confirmar-correo" element={<Confirmacion />} />
               <Route path="/menu-inicial" element={<Dashboard/>} />
+              <Route path="/solicitudes-estudiante" element={<RequestStudents/>} />
               
             </Routes>
 

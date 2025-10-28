@@ -33,7 +33,7 @@ export const Dashboard = () => {
             </button>
 
             <button
-              onClick={() => navigate("/gestionar-solicitudes")}
+              onClick={() => navigate("/solicitudes-estudiante")}
              className="bg-white/90 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg shadow w-80 h-30 text-lg flex items-center justify-center gap-2">
               <img src="/GestionarSolicitudes.svg" alt="Icono" className="w-50 h-50" />
             </button>
@@ -68,7 +68,7 @@ export const Dashboard = () => {
         </div>
 
         <button
-          onClick={() => navigate("/inicio-seccion")}
+          onClick={() => navigate("/inicio-sesion")}
           className="bg-white/90 w-80 h-30 translate-y-20 -translate-x-150">
           ↲ Cerrar sesión
         </button>
