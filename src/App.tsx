@@ -24,6 +24,7 @@ import { ReportGlobal} from "./pages/Report/ReportGlobal";
 import { ReportGrupo} from "./pages/Report/ReportGrupo";
 import SolicitudesPorFacultad from "./pages/statistics/Statiscs";
 import Decanatura from "./pages/consult/consulta";
+import GestionarAsignaturasYGrupos from "./pages/GruposYMaterias/grupo";
 
 function App() {
   return (
@@ -58,6 +59,7 @@ function App() {
               <Route path="/solicitudes-estudiante" element={<RequestStudents/>} />
               <Route path="/solicitudes-facultad" element={<SolicitudesPorFacultad />} />
               <Route path="/consultas" element={< Decanatura />} />
+              <Route path="/gestionGrupo" element={< GestionarAsignaturasYGrupos />} />
               
             </Routes>
 

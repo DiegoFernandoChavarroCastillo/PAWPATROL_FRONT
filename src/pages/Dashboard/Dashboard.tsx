@@ -60,7 +60,7 @@ export const Dashboard = () => {
             </button>
 
             <button
-              onClick={() => navigate("/gestion-grupos-materias")}
+              onClick={() => navigate("/gestionGrupo")}
              className="bg-white/90 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg shadow w-80 h-30 text-lg flex items-center justify-center gap-2">
               <img src="/GruposAsignaturas.svg" alt="Icono" className="w-40 h-40" />
             </button>
