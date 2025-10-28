@@ -14,9 +14,9 @@ export const RequestStudents = () => {
 
         {/* Tabla de solicitudes - Con scroll para muchas filas */}
         <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-6 border border-gray-200">
-          <div className="overflow-y-auto max-h-96"> {/* Scroll vertical máximo 384px (96 * 4) */}
+          <div className="overflow-y-auto max-h-96"> 
             <table className="w-full">
-              <thead className="bg-gray-100 border-b border-gray-300 sticky top-0"> {/* Sticky header */}
+              <thead className="bg-gray-100 border-b border-gray-300 sticky top-0"> 
                 <tr>
                   <th className="px-6 py-4 text-left font-semibold text-gray-700 bg-gray-100">Fecha</th>
                   <th className="px-6 py-4 text-left font-semibold text-gray-700 bg-gray-100">Hora</th>

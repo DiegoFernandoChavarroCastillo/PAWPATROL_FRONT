@@ -33,7 +33,7 @@ export const Dashboard = () => {
             </button>
 
             <button
-              onClick={() => navigate("/solicitudes-estudiantes")}
+              onClick={() => navigate("/solicitudes-estudiante")}
              className="bg-white/90 hover:bg-gray-200 text-gray-800 font-semibold rounded-lg shadow w-80 h-30 text-lg flex items-center justify-center gap-2">
               <img src="/GestionarSolicitudes.svg" alt="Icono" className="w-50 h-50" />
             </button>
