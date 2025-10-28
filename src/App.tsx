@@ -1,7 +1,6 @@
-import { GitHubBanner, Refine, WelcomePage } from "@refinedev/core";
+import {Refine } from "@refinedev/core";
 import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
-
 import routerProvider, {
   DocumentTitleHandler,
   UnsavedChangesNotifier,
@@ -10,11 +9,16 @@ import dataProvider from "@refinedev/simple-rest";
 import { BrowserRouter, Route, Routes } from "react-router";
 import "./App.css";
 import { authProvider } from "./authProvider";
+import { Hero } from "./pages/loginDeanery/Hero"; 
+import { RecuperarCorreo} from "./pages/forgotPassword/RecuperarCorreo"; 
+import { Confirmacion} from "./pages/forgotPassword/Confirmacion"; 
+import { Dashboard} from "./pages/Dashboard/Dashboard"; 
+
 
 function App() {
   return (
     <BrowserRouter>
-      <GitHubBanner />
+     
       <RefineKbarProvider>
         <DevtoolsProvider>
           <Refine
@@ -28,8 +32,13 @@ function App() {
             }}
           >
             <Routes>
-              <Route index element={<WelcomePage />} />
+              <Route index element={<Hero />} />
+              <Route path="/inicio-seccion" element={<Hero />} />
+              <Route path="/recuperar-correo" element={<RecuperarCorreo />} />
+              <Route path="/confirmar-correo" element={<Confirmacion />} />
+              <Route path="/menu-inicial" element={<Dashboard/>} />
             </Routes>
+
             <RefineKbar />
             <UnsavedChangesNotifier />
             <DocumentTitleHandler />
