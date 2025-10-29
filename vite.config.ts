@@ -1,8 +1,15 @@
-import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [react()],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://pawpatrol-back-preprod-bvhubpaxgda3frfy.brazilsouth-01.azurewebsites.net",
+        changeOrigin: true,
+        secure: true,
+      },
+    },
+  },
 });

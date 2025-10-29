@@ -1,57 +1,28 @@
-import {Refine } from "@refinedev/core";
-import { DevtoolsPanel, DevtoolsProvider } from "@refinedev/devtools";
-import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
-import routerProvider, {
-  DocumentTitleHandler,
-  UnsavedChangesNotifier,
-} from "@refinedev/react-router";
-import dataProvider from "@refinedev/simple-rest";
-import { BrowserRouter, Route, Routes } from "react-router";
-import "./App.css";
-import { authProvider } from "./authProvider";
-import { Hero } from "./pages/loginDeanery/Hero"; 
-import { Registrarse } from "./pages/loginDeanery/registrarse"; 
-import { Registrado } from "./pages/loginDeanery/Registrado"; 
-import { RecuperarCorreo} from "./pages/forgotPassword/RecuperarCorreo"; 
-import { Confirmacion} from "./pages/forgotPassword/Confirmacion"; 
-import { Dashboard} from "./pages/Dashboard/Dashboard"; 
-
+import Navbar from "./components/Navbar";
+import { useAuth } from "./context/AuthContext";
+import LoginPage from "./pages/LoginPage";
 
 function App() {
-  return (
-    <BrowserRouter>
-     
-      <RefineKbarProvider>
-        <DevtoolsProvider>
-          <Refine
-            dataProvider={dataProvider("https://api.fake-rest.refine.dev")}
-            routerProvider={routerProvider}
-            authProvider={authProvider}
-            options={{
-              syncWithLocation: true,
-              warnWhenUnsavedChanges: true,
-              projectId: "92BBVY-o0W5T8-JwQpqE",
-            }}
-          >
-            <Routes>
-              <Route index element={<Hero />} />
-              <Route path="/inicio-seccion" element={<Hero />} />
-              <Route path="/inicio-registro" element={<Registrarse />} />
-              <Route path="/fin-registro" element={<Registrado/>} />
-              <Route path="/recuperar-correo" element={<RecuperarCorreo />} />
-              <Route path="/confirmar-correo" element={<Confirmacion />} />
-              <Route path="/menu-inicial" element={<Dashboard/>} />
-              
-            </Routes>
+  const { token } = useAuth();
 
-            <RefineKbar />
-            <UnsavedChangesNotifier />
-            <DocumentTitleHandler />
-          </Refine>
-          <DevtoolsPanel />
-        </DevtoolsProvider>
-      </RefineKbarProvider>
-    </BrowserRouter>
+  if (!token) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
+        <LoginPage />
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gray-100">
+      <Navbar />
+      <main className="p-8 text-center">
+        <h1 className="text-3xl font-bold mb-4">Welcome to MyApp</h1>
+        <p className="text-gray-700">
+          This is your new React + TypeScript + Tailwind project 🚀
+        </p>
+      </main>
+    </div>
   );
 }
 
